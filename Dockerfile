@@ -24,6 +24,7 @@ RUN apt update \
 
 # copy minetrack files
 WORKDIR /usr/src/minetrack
+RUN mkdir -p /usr/src/minetrack/data
 COPY . .
 
 # build minetrack
