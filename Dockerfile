@@ -16,7 +16,7 @@ RUN chmod +x /sbin/tini
 RUN echo "deb http://security.debian.org/debian-security bullseye-security main contrib non-free" > /etc/apt/sources.list
 RUN apt update \
     && apt install -y --no-install-recommends sqlite3 \
-    && apt clean-y \
+    && apt clean -y \
     && apt autoremove -y \
     && rm -rm /var/lib/apt/lists/*
 
