@@ -1,4 +1,4 @@
-FROM node:15
+FROM node:18
 
 ARG TINI_VER="v0.19.0"
 
@@ -7,6 +7,7 @@ ADD https://github.com/krallin/tini/releases/download/$TINI_VER/tini /sbin/tini
 RUN chmod +x /sbin/tini
 
 # install sqlite3
+
 #RUN apt-get update                                                   \
 # && apt-get install    --quiet --yes --no-install-recommends sqlite3 \
 # && apt-get clean      --quiet --yes                                 \
@@ -15,18 +16,18 @@ RUN chmod +x /sbin/tini
 
 RUN echo "deb http://security.debian.org/debian-security bullseye-security main contrib non-free" > /etc/apt/sources.list
 RUN apt update \
-    && apt install -y --no-install-recommends sqlite3 \
-    && apt clean -y \
-    && apt autoremove -y \
-    && rm -rm /var/lib/apt/lists/*
+	&& apt install -y sqlite3 \
+	&& apt clean -y \
+	&& apt autoremove -y \
+	&& rm -rf /var/lib/apt/lists/*
 
-  
+
 # copy minetrack files
 WORKDIR /usr/src/minetrack
 COPY . .
 
 # build minetrack
-RUN npm install --build-from-source \
+RUN npm install \
  && npm run build
 
 # run as non root
