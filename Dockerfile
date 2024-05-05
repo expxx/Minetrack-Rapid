@@ -7,12 +7,20 @@ ADD https://github.com/krallin/tini/releases/download/$TINI_VER/tini /sbin/tini
 RUN chmod +x /sbin/tini
 
 # install sqlite3
-RUN apt-get update                                                   \
- && apt-get install    --quiet --yes --no-install-recommends sqlite3 \
- && apt-get clean      --quiet --yes                                 \
- && apt-get autoremove --quiet --yes                                 \
- && rm -rf /var/lib/apt/lists/*
+#RUN apt-get update                                                   \
+# && apt-get install    --quiet --yes --no-install-recommends sqlite3 \
+# && apt-get clean      --quiet --yes                                 \
+# && apt-get autoremove --quiet --yes                                 \
+# && rm -rf /var/lib/apt/lists/*
 
+RUN echo "deb http://security.debian.org/debian-security bullseye-security main contrib non-free" > /etc/apt/sources.list
+RUN apt update \
+    && apt install -y --no-install-recommends sqlite3 \
+    && apt clean-y \
+    && apt autoremove -y \
+    && rm -rm /var/lib/apt/lists/*
+
+  
 # copy minetrack files
 WORKDIR /usr/src/minetrack
 COPY . .
