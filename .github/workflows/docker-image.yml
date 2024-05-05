@@ -39,7 +39,7 @@ jobs:
         uses: Azure/k8s-set-context@v1
         with:
           method: kubeconfig
-          kubeconfig: ${{ secures.KUBE_CONFIG }}
+          kubeconfig: ${{ secrets.KUBE_CONFIG }}
           namespace: default
       - name: Restart Deployment
         run: kubectl rollout restart deployment minetrack --namespace=default
