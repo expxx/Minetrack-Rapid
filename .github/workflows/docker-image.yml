@@ -39,4 +39,4 @@ jobs:
         with:
           base64-kube-config: ${{ secrets.KUBE_CONFIG }}
       - name: Restart Deployment
-        run: kubectl rollout restart deployment minetrack --namespace=default
+        run: kubectl --insecure-skip-tls-verify rollout restart deployment minetrack --namespace=default
