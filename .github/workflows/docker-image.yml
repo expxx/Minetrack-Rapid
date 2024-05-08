@@ -35,6 +35,8 @@ jobs:
           push: true
           tags: |
              ghcr.io/expxx/rapid:track
+      - name: Update CACerts
+        run: apt install ca-certificates -y
       - name: Kuber Context
         uses: Azure/k8s-set-context@v1
         with:
