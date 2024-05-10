@@ -23,10 +23,5 @@
 		"name": "Pika Network",
 		"ip": "play.pika-network.net",
 		"type": "PC"
-	},
-	{
-		"name": "Lemon Cloud",
-		"ip": "play.lemoncloud.net",
-		"type": "PC"
 	}
 ]
