@@ -9,10 +9,10 @@
 	},
 	"oldPingsCleanup": {
 		"enabled": true,
-		"interval": 2592000000
+		"interval": 86400000
 	},
 	"logFailedPings": true,
 	"logToDatabase": true,
-	"graphDuration": 2592000000,
-	"serverGraphDuration": 2592000000
+	"graphDuration": 86400000,
+	"serverGraphDuration": 86400000
 }
