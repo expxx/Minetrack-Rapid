@@ -3,5 +3,30 @@
 		"name": "Minehut",
 		"ip": "mc.minehut.com",
 		"type": "PC"
+	},
+	{
+		"name": "Wild Prison",
+		"ip": "play.wildprison.net",
+		"type": "PC"
+	},
+	{
+		"name": "AkumaMC",
+		"ip": "play.akumamc.net",
+		"type": "PC"
+	},
+	{
+		"name": "Purple Prison",
+		"ip": "play.purpleprison.net",
+		"type": "PC"
+	},
+	{
+		"name": "Pika Network",
+		"ip": "play.pika-network.net",
+		"type": "PC"
+	},
+	{
+		"name": "Lemon Cloud",
+		"ip": "play.lemoncloud.net",
+		"type": "PC"
 	}
 ]
