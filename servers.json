@@ -9,4 +9,14 @@
 		"ip": "mh.carted.net",
 		"type": "PC"
 	}
+	{
+		"name": "PlushedGens - EXT",
+		"ip": "play.plushedgens.com",
+		"type": "PC"
+	},
+	{
+		"name": "PlushedGens - MH",
+		"ip": "mh.plushedgens.com",
+		"type": "PC"
+	}
 ]
