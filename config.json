@@ -9,7 +9,7 @@
 	},
 	"oldPingsCleanup": {
 		"enabled": true,
-		"interval": 259200000
+		"interval": 1209600000
 	},
 	"logFailedPings": true,
 	"logToDatabase": true,
