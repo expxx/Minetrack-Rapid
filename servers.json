@@ -1,22 +1,12 @@
 [
 	{
-		"name": "Carted - EXT",
+		"name": "Carted",
 		"ip": "play.carted.net",
 		"type": "PC"
-	},
+	}
 	{
-		"name": "Carted - MH",
-		"ip": "mh.carted.net",
-		"type": "PC"
-	},
-	{
-		"name": "PlushedGens - EXT",
+		"name": "PlushedGens",
 		"ip": "play.plushedgens.com",
-		"type": "PC"
-	},
-	{
-		"name": "PlushedGens - MH",
-		"ip": "mh.plushedgens.com",
 		"type": "PC"
 	}
 ]
